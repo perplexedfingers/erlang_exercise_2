@@ -39,7 +39,6 @@ init([]) ->
           start => {the_server, start_link, []}
          }
     ],
-    gen_event:add_handler(info_man, terminal_logger, []),
     {ok, {SupFlags, ChildSpecs}}.
 
 %% internal functions

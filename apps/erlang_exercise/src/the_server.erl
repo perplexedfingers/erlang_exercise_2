@@ -7,6 +7,7 @@
 -export([init/1, handle_call/3, handle_cast/2]).
 
 start_link() ->
+    gen_event:add_handler(info_man, terminal_logger, []),
     gen_server:start_link({local, server}, the_server, [], []).
 
 init(_Args) ->
