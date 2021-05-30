@@ -16,12 +16,15 @@ terminate(shutdown, _State) ->
     ok.
 
 show_now() ->
+    gen_event:notify(info_man, "Query current value"),
     gen_server:call(server, show_now).
 
 go_up() ->
+    gen_event:notify(info_man, io:format("The value does UP and become '~p'~n", [what])),
     gen_server:call(server, up).
 
 go_down() ->
+    gen_event:notify(info_man, io:format("The value does DOWN and become '~p'~n", [what])),
     gen_server:call(server, down).
 
 handle_call(up, _From, Count) ->

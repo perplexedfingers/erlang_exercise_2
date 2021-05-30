@@ -27,11 +27,19 @@ start_link() ->
 %%                  modules => modules()}   % optional
 init([]) ->
     SupFlags = #{
-        strategy => one_for_all,
+        strategy => one_for_one,
         intensity => 0,
         period => 1
     },
-    ChildSpecs = [],
+    ChildSpecs = [
+        #{id => info_man,
+          start => {gen_event, start_link, [{local, info_man}]},
+          modules => dynamic},
+        #{id => server,
+          start => {the_server, start_link, []}
+         }
+    ],
+    gen_event:add_handler(info_man, terminal_logger, []),
     {ok, {SupFlags, ChildSpecs}}.
 
 %% internal functions
