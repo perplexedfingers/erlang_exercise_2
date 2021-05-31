@@ -32,11 +32,11 @@ init([]) ->
         period => 1
     },
     ChildSpecs = [
-        #{id => info_man,
+        #{id => logger,
           start => {gen_event, start_link, [{local, info_man}]},
           modules => dynamic},
-        #{id => server,
-          start => {the_server, start_link, []}
+        #{id => the_server,
+          start => {the_server, start_link, [0]}
          }
     ],
     {ok, {SupFlags, ChildSpecs}}.
