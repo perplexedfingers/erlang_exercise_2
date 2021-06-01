@@ -19,6 +19,7 @@ Not in any order
 - [ ] Play with monitor
 - [ ] Play with ``dialyzer``, if reasonable
 - [ ] Play with ``mnesia``
+- [ ] Play with GitHub Actions
 
 Build
 -----
