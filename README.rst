@@ -31,3 +31,7 @@ Format
 Run tests
 ---------
 ``$ rebar3 eunit``
+
+Run HTTP server
+---------------
+``$ rebar3 shell``
