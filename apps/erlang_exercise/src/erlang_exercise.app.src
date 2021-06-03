@@ -8,7 +8,7 @@
         stdlib,
         cowboy
     ]},
-    {env, [{port, 80}]},
+    {env, []},
     {modules, []},
 
     {licenses, ["Apache 2.0"]},
