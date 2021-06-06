@@ -13,9 +13,9 @@ Not in any order
 - [X] Integrate ``gen_event`` with ``gen_event``
 - [X] Practice ``supervisor``
 - [X] Use ``cowboy``
-- [ ] Make a release
+- [X] Make a release
 - [ ] Online debug
-- [ ] Hot code reload
+- [X] Hot code reload
 - [ ] Play with monitor
 - [ ] Play with ``dialyzer``, if reasonable
 - [ ] Play with ``mnesia``
@@ -35,4 +35,4 @@ Run tests
 
 Run HTTP server
 ---------------
-``$ rebar3 shell``
+``$ PORT=8000 rebar3 shell``

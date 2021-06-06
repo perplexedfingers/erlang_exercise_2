@@ -1,0 +1,4 @@
+{"0.1.1",
+ [{"0.1.0", [{load_module, hello_handler}]}],
+ [{"0.1.0", [{load_module, hello_handler}]}]
+}.

@@ -6,5 +6,5 @@
 
 init(Req0, State) ->
     ok = go_up(),
-    Req = cowboy_req:reply(200, #{<<"content-type">> => <<"text/plain">>}, <<"+1!">>, Req0),
+    Req = cowboy_req:reply(200, #{<<"content-type">> => <<"text/plain">>}, <<"YOOOOOOOOOOOO">>, Req0),
     {ok, Req, State}.
